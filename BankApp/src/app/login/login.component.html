@@ -1,0 +1,36 @@
+<div class="full ">  
+    <!-- <div class="container">
+        <b class="text-success"><i class="fa fa-bank" style="font-size:48px;"></i><br>
+            <h1 class="text-white">Bank.</h1>
+        </b>
+    </div> -->
+    <div class="col">
+        
+        <div class="main    text-white center-block">
+       
+          <h1 class="text-center mt-2 text-white" >Login</h1>
+            <i class="icon fa fa-bank m-3 pt-3" style="font-size:48px;" ></i>
+            <h3 class="my">My Bank </h3>
+            <h6 align="center">{{aim}}</h6>
+    <form [formGroup]="loginForm" action="">
+        <div id="id" class="text-center">
+    <input formControlName="acno" type="" id="log_acno" class="form-control m-2 ms-5 mt-3 w-75"  [placeholder]="account">
+    <!-- <i class="fa-solid fa-user"></i> -->
+
+    <p *ngIf="this.loginForm.get('acno')?.errors && this.loginForm.get('acno')?.touched" class="text-danger" >Invalid Acno</p>
+
+    <input formControlName="pswd" id="log_psw" type="password" class="form-control m-2 ms-5 mt-3 w-75"  placeholder="Password">
+    <p *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched" class="text-danger" >Invalid Password</p>
+
+    <button id="" (click)="login()" class="btn w-75 btn-primary ms-2 mt-5">Login</button><br>
+    <a href="#"class="l text-center mt-2" >ForgetPassword?</a> &nbsp;&nbsp;
+        <a routerLink="register" class="l" >SignUp</a>
+    
+        </div>
+    </form>
+
+
+        </div>
+
+    </div>
+</div>

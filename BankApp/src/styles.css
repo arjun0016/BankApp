@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@1,500&family=Shadows+Into+Light&display=swap');
+.main{
+    margin-top: 50px;
+   /* margin-right: auto; */
+height:400px;
+width: 400px;
+/* From https://css.glass */
+background: rgba(109, 133, 111, 0.1);
+border-radius: 16px;
+box-shadow: 0 40px 20px rgba(0, 0, 0, 0.704);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+}
+.w{
+/* background-image: url(./assets/image/g.jpg); */
+background-repeat: no-repeat;
+margin-top: 50px;
+/* margin-left: 30px; */
+height:260px;
+width: 400px;
+box-shadow: 20px 20px 10px rgb(0, 0, 0);
+border-radius: 10px;
+
+}
+.my{
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+#id{
+    margin-top: 50px;
+}
+
+.or{
+    text-decoration:none;
+    color: black;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+}
+.child{
+    display: inline-block;
+    /* padding-left: 60px; */
+    /* padding-top: 100px; */
+    /* margin: 100px; */
+     /* margin-left: 140px; */
+    /* align-items: center; */
+    /* display: flex; */
+    /* justify-content: center;  */
+}
+.parent{
+    /* display: inline-block; */
+    /* align-items: center; */
+    /* justify-content: center;  */
+/* margin-left: 150px; */
+
+}
+

@@ -1,0 +1,33 @@
+.full{
+    background-image: url(../../assets/image/g.jpg);
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-size: cover; */
+}
+#link{
+    margin-left: 60px;
+    color: rgba(255, 255, 255, 0.715);
+    text-decoration: none;
+}
+nav{
+    padding-left: 450px;
+}
+h4{
+    color: green;
+}
+p{
+    color: rgba(255, 255, 255, 0.578);
+}
+.his{
+   
+    color: rgba(255, 255, 255, 0.87);
+    text-decoration: none;
+}
+h1{
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+  .style1{
+    opacity: 0;
+}

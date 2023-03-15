@@ -1,0 +1,97 @@
+<section class="full ">
+<div class="container">
+    
+    <nav class=" float-end mt-3">
+        <h4>
+           
+            <button (click)="logout()" class="btn btn-outline-warning ms-5">Logout</button>
+            <button (click)="delete()" class="btn btn-outline-danger ms-5">Delete</button><br><br>
+        <h5 class="text-white float-end"> <p>Date: {{sdate|date:'short'}}</p></h5>
+
+       </h4>
+    </nav>
+    <div class="">
+        <b class="text-success "><i class="fa fa-bank" style="font-size:48px;"></i><br>
+            <h1 class="text-white">Bank.</h1>
+        </b>
+    </div>
+      
+        <h1 class="text-white">welcome {{user}}</h1> <br><br><br>
+
+        <section class="mt-5">
+            <h4><b>MONEY</b></h4>
+            <h1 class="text-white">Information for<br>financial literacy</h1>
+            <p> We have a large section where we give tips <br> on how to manage your finances</p>
+        </section><br><br><br>
+        <app-delete style="text-align: center;" [item]="acno" (onCancel)="onCancel()" (onDelete)="onDelete($event)"></app-delete>
+
+
+       <button class="btn btn-outline-success"><a class="his mt-4" routerLink="/transaction">View Transaction History</a> <br></button><br>
+    <div [ngClass]="acno?'style1': ''" class="parent" align="center" >
+
+        <div class="child ms-2 me-3" >
+            <div class="main text-white" >
+                <form [formGroup]="depositForm" action="">
+
+                    <!-- <i class="icon fa fa-money-from-bracket m-3 pt-3" style="font-size:48px;"></i> -->
+                    <h3 class="my m-3 pt-3">Deposit </h3>
+
+                    <div id="id" class="text-center">
+                        <input formControlName="acno" type="number" id="user_number" name="Account number"
+                            class="form-control m-2 ms-5 mt-3 w-75 " placeholder="Account Number">
+                        <p *ngIf="this.depositForm.get('acno')?.errors && this.depositForm.get('acno')?.touched"
+                            class="text-danger">Invalid Account Number</p>
+                        <input formControlName="pswd" type="password" id="user_password" name="password"
+                            class="form-control m-2 ms-5 mt-3 w-75 " placeholder="Password">
+                        <p *ngIf="this.depositForm.get('pswd')?.errors && this.depositForm.get('pswd')?.touched"
+                            class="text-danger">Invalid Password</p>
+                        <input formControlName="amount" type="" id="dep_amount" name="deposit"
+                            class="form-control  m-2 ms-5 mt-3 w-75" placeholder="deposit">
+                        <p *ngIf="this.depositForm.get('amount')?.errors && this.depositForm.get('amount')?.touched"
+                            class="text-danger">Invalid Amount</p>
+
+
+                        <button (click)="deposit()"  class="btn ms-2  w-75 btn-primary  mt-5">Deposit</button>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="child ms-2 me-3">
+            <div class="main   text-white" >
+                <form [formGroup]="withdrawForm" action="">
+
+                    <!-- <i class="icon fa fa-money-from-bracket m-3 pt-3" style="font-size:48px;"></i> -->
+                    <h3 class="my m-3 pt-3">Withdraw</h3>
+
+                    <div id="id" class="text-center">
+                        <input formControlName="acno1" type="number" id="user_no" name="accountnumber"
+                            class="form-control m-2 ms-5 mt-3 w-75 " placeholder="Account Number">
+                        <p *ngIf="this.withdrawForm.get('acno1')?.errors && this.withdrawForm.get('acno1')?.touched"
+                            class="text-danger">Invalid Account Number</p>
+                        <input formControlName="pswd1" type="password" id="user_pswd" name="Password"
+                            class="form-control  m-2 ms-5 mt-3 w-75 " placeholder="Password">
+                        <p *ngIf="this.withdrawForm.get('pswd1')?.errors && this.withdrawForm.get('pswd1')?.touched"
+                            class="text-danger">Invalid Password</p>
+                        <input formControlName="amount1" type="" id="with_amount" name="withdraw"
+                            class="form-control m-2 ms-5 mt-3 w-75 " placeholder="Withdraw">
+                        <p *ngIf="this.withdrawForm.get('amount1')?.errors && this.withdrawForm.get('amount1')?.touched"
+                            class="text-danger">Invalid Amount</p>
+                            
+
+
+                        <button (click)="withdraw()" class="btn ms-2  w-75 btn-primary  mt-5">Withdraw</button>
+
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+
+    </div><br>
+        <b class="d-flex mt-5"><h3 class="text-success">Balance : </h3><h3 class="text-white">&nbsp; {{bal}}</h3></b>
+
+</div>
+</section>
